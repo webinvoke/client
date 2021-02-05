@@ -1,0 +1,27 @@
+{
+    "name": "winvoke/client",
+    "description": "A winvoke webhook client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmard",
+            "email": "Ahmard06@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "ahmard/guzwrap": "^2.1",
+        "nette/utils": "^3.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.71",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Winvoke\\Client\\": "src/"
+        }
+    }
+}
