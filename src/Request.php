@@ -42,7 +42,7 @@ class Request
     }
 
     /**
-     * Remote winvoke server
+     * Remote webinvoke server
      * @param string|Server $uriOrServer
      * @return $this
      */

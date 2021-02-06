@@ -1,6 +1,6 @@
 {
     "name": "webinvoke/client",
-    "description": "A winvoke webhook client",
+    "description": "A webinvoke webhook client",
     "type": "library",
     "license": "MIT",
     "keywords": ["webinvoke", "hook", "web hook"],
