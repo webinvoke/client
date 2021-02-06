@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Winvoke\Client;
+namespace Webinvoke\Client;
 
 
 use Nette\Utils\Json;

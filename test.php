@@ -1,9 +1,9 @@
 <?php
 
-use Winvoke\Client\Auth;
-use Winvoke\Client\Query;
-use Winvoke\Client\Request;
-use Winvoke\Client\Server;
+use Webinvoke\Client\Auth;
+use Webinvoke\Client\Query;
+use Webinvoke\Client\Request;
+use Webinvoke\Client\Server;
 
 require 'vendor/autoload.php';
 

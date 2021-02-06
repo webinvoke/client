@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Winvoke\Client;
+namespace Webinvoke\Client;
 
 use Closure;
 use Guzwrap\Request as GRequest;
@@ -33,14 +33,12 @@ class Request
         if (is_string($tokenOrAuth)) {
             $this->auth = Auth::create($tokenOrAuth);
             return $this;
-        }
-
-        if ($tokenOrAuth instanceof Auth) {
+        } elseif ($tokenOrAuth instanceof Auth) {
             $this->auth = $tokenOrAuth;
             return $this;
+        } else {
+            throw new UnexpectedValueException('Passed parameter only support value of type string or Webinvoke\Client\Auth');
         }
-
-        throw new UnexpectedValueException('Passed parameter only support value of type string or Winvoke\Client\Auth');
     }
 
     /**
@@ -75,7 +73,7 @@ class Request
             return $this;
         }
 
-        throw new UnexpectedValueException('Passed parameter only support value of type \Closure or Winvoke\Client\Query');
+        throw new UnexpectedValueException('Passed parameter only support value of type \Closure or Webinvoke\Client\Query');
     }
 
     public function execute(): Response

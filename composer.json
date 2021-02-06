@@ -1,8 +1,9 @@
 {
-    "name": "winvoke/client",
+    "name": "webinvoke/client",
     "description": "A winvoke webhook client",
     "type": "library",
     "license": "MIT",
+    "keywords": ["webinvoke", "hook", "web hook"],
     "authors": [
         {
             "name": "Ahmard",
@@ -21,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Winvoke\\Client\\": "src/"
+            "Webinvoke\\Client\\": "src/"
         }
     }
 }

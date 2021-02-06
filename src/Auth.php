@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Winvoke\Client;
+namespace Webinvoke\Client;
 
 
 class Auth

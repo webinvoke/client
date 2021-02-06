@@ -1,21 +1,21 @@
-# Winvoke Client
-Winvoke(Web Invoke) client is a client that provided access to all functionalities provied by [Winvoke Server](https://github.com/winvoke/server). <br/>
+# WebInvoke Client
+Webinvoke client is a client that provided access to all functionalities provied by [Webinvoke Server](https://github.com/webinvoke/server). <br/>
 This library uses [Guzwrap](https://github.com/ahmard/guzwrap) internally.
 
 ## Installation
 Installation is made using [Composer](https://getcomposer.org)
 
 ```bash
-composer require winvoke/client
+composer require webinvoke/client
 ```
 
 ## Usage
-Before running below code, [Winvoke Server](https://github.com/winvoke/server#usage) must be started on port **8999**.
+Before running below code, [Webinvoke Server](https://github.com/webinvoke/server#usage) must be started on port **8999**.
 ```php
-use Winvoke\Client\Auth;
-use Winvoke\Client\Query;
-use Winvoke\Client\Request;
-use Winvoke\Client\Server;
+use Webinvoke\Client\Auth;
+use Webinvoke\Client\Query;
+use Webinvoke\Client\Request;
+use Webinvoke\Client\Server;
 
 require 'vendor/autoload.php';
 
