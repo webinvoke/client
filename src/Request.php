@@ -6,9 +6,9 @@ namespace Winvoke\Client;
 use Closure;
 use Guzwrap\Request as GRequest;
 use Guzwrap\Wrapper\Form;
-use InvalidArgumentException;
 use LogicException;
 use Nette\Utils\Json;
+use UnexpectedValueException;
 
 
 class Request
@@ -35,12 +35,12 @@ class Request
             return $this;
         }
 
-        if ($tokenOrAuth instanceof Auth){
+        if ($tokenOrAuth instanceof Auth) {
             $this->auth = $tokenOrAuth;
             return $this;
         }
 
-        throw new InvalidArgumentException('Passed parameter only support value of type string or Winvoke\Client\Auth');
+        throw new UnexpectedValueException('Passed parameter only support value of type string or Winvoke\Client\Auth');
     }
 
     /**
@@ -65,17 +65,17 @@ class Request
      */
     public function query($closureOrQuery): Request
     {
-        if (is_callable($closureOrQuery)){
+        if (is_callable($closureOrQuery)) {
             $query = new Query();
             $closureOrQuery($query);
             $this->query = $query;
             return $this;
-        }elseif ($closureOrQuery instanceof Query){
+        } elseif ($closureOrQuery instanceof Query) {
             $this->query = $closureOrQuery;
             return $this;
         }
 
-        throw new InvalidArgumentException('Passed parameter only support value of type \Closure or Winvoke\Client\Query');
+        throw new UnexpectedValueException('Passed parameter only support value of type \Closure or Winvoke\Client\Query');
     }
 
     public function execute(): Response
